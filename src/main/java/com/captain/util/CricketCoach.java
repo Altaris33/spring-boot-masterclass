@@ -1,4 +1,4 @@
-package fr.captain.mycoolapp.common;
+package com.captain.util;
 
 import org.springframework.stereotype.Component;
 
