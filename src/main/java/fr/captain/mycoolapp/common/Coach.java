@@ -1,4 +1,4 @@
-package com.captain.util;
+package fr.captain.mycoolapp.common;
 
 public interface Coach {
 

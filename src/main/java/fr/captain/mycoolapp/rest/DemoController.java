@@ -1,6 +1,6 @@
 package fr.captain.mycoolapp.rest;
 
-import com.captain.util.Coach;
+import fr.captain.mycoolapp.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
