@@ -12,14 +12,23 @@ public class DemoController {
     // define a private field for the dependency
     private Coach coach;
 
+    private Coach anotherCoach;
+
     @Autowired
-    public DemoController(@Qualifier("tennisCoach") Coach coach) {
+    public DemoController(@Qualifier("tennisCoach") Coach coach,
+                          @Qualifier("tennisCoach") Coach anotherCoach) {
         System.out.println("Class: " + this.getClass().getSimpleName());
         this.coach = coach;
+        this.anotherCoach = anotherCoach;
     }
 
     @GetMapping("/daily-workout")
     public String getDailyWorkout(){
         return coach.getDailyWorkout();
+    }
+
+    @GetMapping("/check-scopes")
+    public String checkScopes(){
+        return "Comparing beans: coach == anotherCoach : " + (coach == anotherCoach);
     }
 }
